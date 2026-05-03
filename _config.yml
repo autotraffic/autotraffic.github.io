@@ -35,6 +35,9 @@ paginate_path: /page:num/
 sass:
   style: compressed
 
+include:
+  - _pages
+  
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
