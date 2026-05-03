@@ -1,67 +1,70 @@
-# Northendlab Jekyll
+                .::         .::                       .::      .::                 
+                .::       .:.::                        .::   .::                    
+                .::         .::         .::    .: .:::  .:: .::   .::  .::   .::    
+                .::      .::.:: .::   .:   .::  .::       .::     .::  .:: .:   .:: 
+                .::      .::.::   .::.::::: .:: .::     .:: .::   .::  .::.::::: .::
+                .::      .::.::   .::.:         .::    .::   .::  .::  .::.:        
+                .::::::::.::.:: .::    .::::   .:::   .::      .::  .::.::  .::::   
+                          Copyright (c) 2016-2018 liberxue
+                                 http://www.liberxue.com
+                           
+#### liberxue.github.io preview (demo) (http://www.liberxue.com)
 
-![northendlab](https://assets.teamosis.com/thumbs/northendlab.png)
+#### `Jekyll Themes`
+----------
+[简体中文版帮助文档README](/ChinaREADME.md)
+#### ``Lightweight``  ``Minimalist``  ``Jekyll blog``
 
-[live demo](https://demo.themefisher.com/northendlab-jekyll/)
+#### The first step is to click [fork][https://github.com/liberxue/liberxue.github.io/fork]
+#### The second step is to modify the _config.yml in URL for your domain name
 
-### Jekyll Install
+#### OK all right, it's that simple
 
-First of all, you need to install Jekyll on your PC. If you don't know how to install Jekyll on your PC, here is great [documentation](https://jekyllrb.com/docs/installation/) for beginners.
+#### I don't want any copyright also don't need you to donate, I only need you with a star 🌟  Thx 😄
 
-### Theme Install
+- [x] Automatic generation tag
+- [x] Automatic generation of JSON search
+- [x] Adaptive template
+- [x] Automatic generation of feed.xml
+- [x] Automatic paging generation
+- [x] Modify _config.yml's links for your menu
+- [x] Modify the _config.yml of paginate for how many pages you want to page
+## Stargazers over time
 
-After installing Jekyll on your pc, [download](https://github.com/themefisher/northendlab-jekyll) the theme from this repository. Unzip it and run `bundle exec jekyll server` to run this template on your localhost.
+[![Stargazers over time](https://starchart.cc/Liberxue/liberxue.github.io.svg)](https://starchart.cc/Liberxue/liberxue.github.io)
 
-### Main Configuration
+![uiliberxue](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/ui.jpg) 
 
-You don't need to change anything in the main configuration (`_config.yml`), just you need to change the `baseURL` when you host this template.
+ ![archives](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/archives.png) 
 
-You will find every parameter in `_data/parameters.yml`` this file.
+ ![blog](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/blog.png) 
 
-#### Navigation Menu
+ ![tags](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/tags.png) 
 
-You can set the main menu and footer menu also from `_data/parameters.yml`, just follow the existing loop for creating a new menu item. This theme also supports the dropdown menu.
+  ![404](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/404.png) 
 
-### Creating New Post
+ ----------
+![blog JSON search](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/01.gif) 
 
-For creating a new blog post, you need to go to the `_posts` folder and create a new file. Make sure you are creating this file name with the existing post name structure which is `year-month-date-post-name.md`. (i.e `2020-02-06-my-awesome-blog.md`). Then follow the existing post front-matter to configure it. Or you can simply copy an existing post and replace its content.
+#### 1.First step Click[fork](https://github.com/Liberxue/liberxue.github.io#fork-destination-box)
+ 
+----
 
-### Creating a New Author
+![fork](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/02.gif)
+  
+  
 
-This is the same process for the blog post. Copy an existing author file, and replace your content and file name.
 
-### Customize Other Pages
+#### 2. modify _config.yml url URL for your domain
 
-Another page customization (like about, contact) is very easy. You can see the other page in the `_pages/` folder. Find the page that you want to customize, and change the content from it. If this page has any loop item, then follow the existing loop to create a new one.
+![modify _config.yml url URL for your domain](https://raw.githubusercontent.com/Liberxue/liberxue.github.io/master/thumbnails/04.gif)
+  
 
-<!-- edit with sitepins -->
 
-## 📝 Edit Content with CMS
 
-This template comes pre-configured with [**Sitepins**](https://sitepins.com/?aff=tfgithub), a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.
+* [Issues](https://github.com/Liberxue/liberxue.github.io/issues)
+ 
+* [Email](mailto:liberxue@gmail.com)
+ 
+* [Twitter](https://twitter.com/liberxue).
 
-**How to get started:**
-
-Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.
-
-  <a target="_blank" href="https://app.sitepins.com/new/clone?name=Northendlab%20Jekyll&repository=https://github.com/themefisher/northendlab-jekyll/?aff=tfgithub">
-    <img src="https://sitepins.com/button.svg" alt="Edit with Sitepins">
-  </a>
-
-### Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the **Northendlab Jekyll Theme**. Please Search [existing issues](https://github.com/themefisher/northendlab-jekyll/issues). It’s possible someone has already reported the same problem.
-If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/northendlab-jekyll/issues/new)
-
-### Technical Support or Questions (Paid)
-
-If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.
-
-<!-- licence -->
-## License
-
-Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
-
-**Code License:** Released under the [MIT](https://github.com/themefisher/northendlab-jekyll/blob/main/LICENSE) license.
-
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.

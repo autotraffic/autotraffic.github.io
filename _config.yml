@@ -1,63 +1,38 @@
-baseurl: "/" # the subpath of your site, e.g. blog/
-url: "https://autotraffic.github.io" # the base hostname & protocol for your site, e.g. http://example.com/
+# ----------- CONFIGURABLE START -----------
+title:            "LiberXue|FullStack|独立开发者|jekyll blog|GitHub blog"
+description:      "Full Stack独立开发者|欢迎来到 LiberXue「角落」侃侃理想、谈谈人生、敲敲代码。"
+url:              https://autotraffic.github.io # 域名
+signoff:          "LiberXue" # Your name
+facebook_appid:   #liberxue
+google_analytics: UA-101222464-1
+share:            true 
+# 分页
+paginate: 15
+paginate_path: "liberxuepage:num"
+gems: [jekyll-paginate]
+links:
+  - name:         首页
+    url:          /
+    external:     false
+  - name:         书籍
+    url:          /book
+    external:     false
+  - name:         旅游
+    url:          /road
+    external:     false
+  - name:         归档
+    url:          /archives
+    external:     false
+  - name:         标签
+    url:          /tags
+    external:     false
+  - name:         关于
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
 
-title: Northendlab Jekyll | Personal Blog Template
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
-#################### Comment Section (Disqus) ################
-disqus_shortname: "" # Add your shortname for Disqus Comment. For example : mr-brown
-
-# Scss Directory
-sass:
-  sass_dir: assets/scss
-  style: compressed
-
-# Build settings
-markdown: kramdown
-permalink: pretty
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll/tagging
-
-paginate: 6
-paginate_path: "/page/:num"
-
-# include
-include:
-  - _pages
-  - _authors
-
-# Pages Path
+#permalink:        /:categories/:title.html
+permalink: /:title.html
 defaults:
-  - scope:
-      path: "_pages"
-    values:
-      permalink: /:basename:output_ext
-
-  - scope:
-      path: "_authors"
-    values:
-      permalink: /author/:basename:output_ext
-      layout: author
-
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      permalink: post/:title:output_ext
-      layout: post
-
-# Tags
-tag_page_dir: tag
-tag_page_layout: tags
-tag_permalink_style: pretty
-
-# Exclude from processing.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - vendor
+  - values:
+      layout: "default"
