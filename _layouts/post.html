@@ -5,7 +5,7 @@ layout: default
 <div class="row">
 
   <!-- MAIN CONTENT -->
-  <div class="col-lg-8 col-12">
+  <div class="col-lg-8">
 
     <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
@@ -13,7 +13,7 @@ layout: default
       {% if page.image %}
       <div class="mb-4">
         <a href="https://aridjaya.com">
-          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="rounded img-fluid  w-100"
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded w-100"
             loading="lazy">
         </a>
       </div>
@@ -144,7 +144,7 @@ layout: default
           <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">
 
             {% if post.image %}
-            <img class='rounded img-fluid  mb-2 ratio ratio-4x3 mb-2' src="{{ post.image | relative_url }}"
+            <img class='img-fluid rounded mb-2 ratio ratio-4x3 mb-2' src="{{ post.image | relative_url }}"
               style="aspect-ratio: 4/3; object-fit: cover;" loading="lazy" />
             {% endif %}
 
@@ -173,7 +173,7 @@ layout: default
         <div class="col-6 col-md-3">
           <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">
             {% if post.image %}
-            <img src="{{ post.image | relative_url }}" class="img-fluid  mb-2">
+            <img src="{{ post.image | relative_url }}" class="img-fluid rounded mb-2">
             {% endif %}
             <small>{{ post.title | truncate: 45 }}</small>
           </a>
@@ -188,7 +188,7 @@ layout: default
   </div>
 
   <!-- SIDEBAR -->
-  <div class="col-lg-4 col-12">
+  <div class="col-lg-4">
     {% include sidebar.html %}
   </div>
 
