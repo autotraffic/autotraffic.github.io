@@ -1,7 +1,7 @@
 <div class="col-lg-4 mt-4 mt-lg-0 w-100 sidebar">
 
   <!-- RECENT POSTS -->
-  <div class="card   bg-white mb-4">
+  <div class="card bg-white mb-4">
     <div class="card-body">
       <h5 class="fw-bold mb-3">Recent</h5>
 
@@ -12,7 +12,7 @@
         {% if post.image %}
         <div class="me-2">
           <a href="{{ post.url | relative_url }}">
-            <img src="{{ post.image | relative_url }}" class=""
+            <img src="{{ post.image | relative_url }}" class="rounded"
               style="min-width: 120px; height: 75px; object-fit: cover;" loading="lazy">
           </a>
         </div>
