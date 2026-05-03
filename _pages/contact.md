@@ -1,20 +1,26 @@
 ---
 layout: page
 title: Contact
-permalink: /contact
-comments: false
+permalink: /contact/
 ---
 
-<form action="https://formspree.io/{{site.email}}" method="POST">    
-<p class="mb-4">Please send your message to {{site.name}}. We will reply as soon as possible!</p>
-<div class="form-group row">
-<div class="col-md-6">
-<input class="form-control" type="text" name="name" placeholder="Name*" required>
-</div>
-<div class="col-md-6">
-<input class="form-control" type="email" name="_replyto" placeholder="E-mail Address*" required>
-</div>
-</div>
-<textarea rows="8" class="form-control mb-3" name="message" placeholder="Message*" required></textarea>    
-<input class="btn btn-dark" type="submit" value="Send">
-</form>
+## Contact Us
+
+Have a question, suggestion, or feedback? Feel free to get in touch. We always appreciate hearing from visitors and improving the experience of this wallpaper collection.
+
+You can contact us for:
+- Wallpaper requests
+- Content suggestions
+- Reporting issues or broken links
+- Collaboration or partnership inquiries
+
+## Get in Touch
+
+📧 Email: [support@aridjaya.com](https://aridjaya.com/wallpaper ){: target="\_blank"} 
+🌐 Website: [Aridjaya](https://aridjaya.com/wallpaper ){: target="\_blank"} 
+
+## Response Time
+
+We usually respond within 24–48 hours depending on the volume of messages.
+
+Thank you for visiting and supporting this wallpaper website. Your feedback helps us grow and improve.

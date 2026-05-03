@@ -1,15 +1,61 @@
 ---
+title: "404"
 layout: default
-title: 404
 permalink: /404.html
 ---
-<style>
-    .newsletter, .footer {
-        display:none;
-    }
-</style>
-<div class="text-center">
-<h1 class="mt-5"><span class="badge badge-dark font-weight-normal">404</span></h1>
-<h1 class="display-1 mt-4 mb-4"> Page not found!</h1>
-<p>Please use the search bar from the bottom left or visit our <a href="{{site.baseurl}}/">homepage</a>!</p>
+
+{% assign random_posts = site.posts | sample: 6 %}
+{% if random_posts == empty %}
+{% assign random_posts = site.posts %}
+{% endif %}
+
+<div class="row g-4 text-start">
+
+    {% for post in random_posts %}
+
+    <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card modern-card h-100 border-0">
+
+            <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">
+
+                {% if post.image %}
+                <div class="overflow-hidden position-relative">
+
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="card-img-top"
+                        style="aspect-ratio: 4/3; object-fit: cover;" loading="lazy">
+
+                </div>
+                {% endif %}
+
+                <div class="card-body">
+
+                    <h4 class="fw-semibold mb-2 text-capitalize">
+                        {{ post.title }}
+                    </h4>
+
+                    <small class="text-muted d-block mb-2">
+                        {{ post.date | date: "%b %-d, %Y" }}
+                    </small>
+
+                    <p class="excerpt">
+                        {{ post.excerpt | strip_html | truncate: 100 }}
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<div class="justify-content-center text-center mb-3">
+    <a href="{{ '/' | relative_url }}" class="btn btn-primary mt-5 px-4">
+        &laquo; Back to Home
+    </a>
 </div>
