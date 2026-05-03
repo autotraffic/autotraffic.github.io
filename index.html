@@ -1,76 +1,65 @@
 ---
 layout: default
 ---
-<div class="container">
-	<div class="row">
-	{% if site.posts.size > 0 %}
-		{%- for post in paginator.posts -%}
-		{% if forloop.index <= 1 %}
-		<div class="col col-12">
-			<article class="article-first">
-				<div class="article-image-first" style="background-image: url({{"/img/" | prepend: site.baseurl | append : post.image}})">
-					<div class="article-content-first">
-						<div class="article-tag">
-						{% if post.tags.size >= 1 %}
-							{% for tag in post.tags %}
-							<a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
-							{% endfor %}
-						{% else %} {% endif %}
-						</div>
-						<h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h2>
-						<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 163 }}{% else %}{{ post.content | strip_html | truncate: 163 }}{% endif %}</p>
-						<a href="{{ post.url | prepend: site.baseurl }}" class="button read-more">Read More</a>
-					</div>
-				</div>
-			</article> <!-- /.article-first -->
-		</div>
-		{% endif %}
 
-		{% endfor %}
-	{% endif %}
-	</div>
-</div>
+<!-- banner -->
+{% if site.data.homepage.banner.enable %}
+<section class="banner bg-cover"
+  style="background-image: url('{{ site.data.homepage.banner.bg_image | relative_url }}');">
+  <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid illustration" alt="">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1>{{ site.data.homepage.banner.title }}</h1>
+      </div>
+      <div class="col-lg-6 illustration-mobile">
+        <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- /banner -->
 
-<div class="container">
-	<div class="row">
-		<div class="col col-12 col-t-8">
-			<div class="row">
-			{%- for post in paginator.posts offset: 1 -%}
-				<article class="article col col-12 col-t-6">
-					<div class="article-box">
-						<div class="article-head">
-							<a href="{{ post.url | prepend: site.baseurl }}" class="article-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : post.image}})">
-								<div class="image-overlay">
-									<span class="image-overlay-text">{{post.title | slice: 0}}</span>
-								</div>
-							</a>
-						</div>
-						<div class="article-content">
-							<div class="article-info">
-								<div class="article-date">
-									<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
-								</div>
-								<div class="article-tag">
-								{% if post.tags.size >= 1 %}
-									{% for tag in post.tags %}
-									<a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
-									{% endfor %}
-								{% else %} {% endif %}
-								</div>
-							</div>
-							<h2 class="article-title">
-								<a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
-							</h2>
-							<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 135 }}{% else %}{{ post.content | strip_html | truncate: 135 }}{% endif %}</p>
-						</div>
-					</div>
-				</article> <!-- /.article -->
-			{% endfor %}
-			</div>
-			{% include pagination.html %}
-		</div>
-		<div class="col col-12 col-t-4">
-			{% include sidebar.html %}
-		</div>
-	</div>
-</div>
+<!-- blog -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto px-0">
+        <div class="bg-white shadow block">
+          {% for post in paginator.posts %}
+          {% include post.html %}
+          {% endfor %}
+          <!-- pagination -->
+          {% include pagination.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /blog -->
+
+<!-- call_to_action -->
+{% if site.data.homepage.call_to_action.enable %}
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="row shadow bg-white p-5">
+          <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
+            <img src="{{ site.data.homepage.call_to_action.image | relative_url }}" class="mr-4 img-fluid rounded" alt=""></div>
+          <div class="col-md-8 text-center text-md-left">
+            <h3 class="mt-0">{{ site.data.homepage.call_to_action.title }}</h3>
+            <p>{{ site.data.homepage.call_to_action.description }}</p>
+            {% if site.data.homepage.call_to_action.button.enable %}
+            <a href="{{ site.data.homepage.call_to_action.button.link | relative_url }}"
+              class="btn btn-primary">{{ site.data.homepage.call_to_action.button.label }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- /call_to_action -->

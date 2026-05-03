@@ -1,9 +1,10 @@
-<div class="comments">
-  <div id="disqus_thread" class="article-comments"></div>
+<!-- disqus-comments -->
+<div class="comments" style="padding: 1rem 0">
+  <div id="disqus_thread" class="comments__article"></div>
   <script>
     (function () {
       var d = document, s = d.createElement('script');
-      s.src = '//{{ site.disqus-identifier }}.disqus.com/embed.js';
+      s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
@@ -11,4 +12,5 @@
   <noscript>Please enable JavaScript to view the
     <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
   </noscript>
-</div> <!-- /.comments -->
+</div>
+<!-- /disqus-comments -->

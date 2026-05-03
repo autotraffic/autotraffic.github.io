@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 {% include head.html %}
 
 <body>
-
-  {% if site.google-analytics %}
-    {% include google-analytics.html %}
-  {% endif %}
-  {% include loader.html %}
-  {% include header.html %}
-
-      {{ content }}
-
-  {% include footer.html %}
-  {% include javascripts.html %}
-
+	{% include preloader.html %}
+	{% include header.html %}
+	{% if page.url != "/" %}<div class="py-5 d-none d-lg-block"></div>{% endif %}
+	{{content}}
+	{% include footer.html %}
 </body>
 
 </html>

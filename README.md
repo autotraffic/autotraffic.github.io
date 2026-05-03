@@ -1,172 +1,67 @@
-Galada - Easy & Simple Theme for Personal Blog
-======
-Galada is an easy and simple theme for Jekyll. Dark colors, give it a special exquisite look. A careful approach to design and features make it an ideal solution for a personal blog.
+# Northendlab Jekyll
 
-* * *
+![northendlab](https://assets.teamosis.com/thumbs/northendlab.png)
 
-Table of Contents
------------------
-*   [Features](#features)
-*   [Demo](#demo)
-*   [Deployment](#deployment)
-*   [Posts](#posts)
-*   [Disqus Comments](#DisqusComments)
-*   [Instagram](#instagram)
-*   [Google Analytics](#GoogleAnalytics)
-*   [Update favicon](#UpdateFavicon)
-*   [Credits](#Credits)
-*   [Support](#Support)
+[live demo](https://demo.themefisher.com/northendlab-jekyll/)
 
-* * *
+### Jekyll Install
 
-### Features
+First of all, you need to install Jekyll on your PC. If you don't know how to install Jekyll on your PC, here is great [documentation](https://jekyllrb.com/docs/installation/) for beginners.
 
-* 100% responsive and clean theme
+### Theme Install
 
-* Optimized for mobile devices
+After installing Jekyll on your pc, [download](https://github.com/themefisher/northendlab-jekyll) the theme from this repository. Unzip it and run `bundle exec jekyll server` to run this template on your localhost.
 
-* Minimal design
+### Main Configuration
 
-* Valid HTML5 code
+You don't need to change anything in the main configuration (`_config.yml`), just you need to change the `baseURL` when you host this template.
 
-* Post sharing
+You will find every parameter in `_data/parameters.yml`` this file.
 
-* Subscription form
+#### Navigation Menu
 
-* Supports Disqus Comments
+You can set the main menu and footer menu also from `_data/parameters.yml`, just follow the existing loop for creating a new menu item. This theme also supports the dropdown menu.
 
-* Instagram Feed
+### Creating New Post
 
-* Ionicons Icons
+For creating a new blog post, you need to go to the `_posts` folder and create a new file. Make sure you are creating this file name with the existing post name structure which is `year-month-date-post-name.md`. (i.e `2020-02-06-my-awesome-blog.md`). Then follow the existing post front-matter to configure it. Or you can simply copy an existing post and replace its content.
 
-* Google Fonts
+### Creating a New Author
 
+This is the same process for the blog post. Copy an existing author file, and replace your content and file name.
 
-* * *
+### Customize Other Pages
 
-### Demo
+Another page customization (like about, contact) is very easy. You can see the other page in the `_pages/` folder. Find the page that you want to customize, and change the content from it. If this page has any loop item, then follow the existing loop to create a new one.
 
-Check the theme in action [Demo](https://artemsheludko.github.io/galada/)
+<!-- edit with sitepins -->
 
-![Main page preview](https://github.com/artemsheludko/galada/blob/master/img/galada-main-page.jpg?raw=true)
+## 📝 Edit Content with CMS
 
-The post page would look like this:
+This template comes pre-configured with [**Sitepins**](https://sitepins.com/?aff=tfgithub), a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.
 
-![Post page preview](https://github.com/artemsheludko/galada/blob/master/img/galada-post.jpg?raw=true)
+**How to get started:**
 
-* * *
+Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.
 
-### Deployment
+  <a target="_blank" href="https://app.sitepins.com/new/clone?name=Northendlab%20Jekyll&repository=https://github.com/themefisher/northendlab-jekyll/?aff=tfgithub">
+    <img src="https://sitepins.com/button.svg" alt="Edit with Sitepins">
+  </a>
 
-To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
+### Reporting Issues
 
-I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
+We use GitHub Issues as the official bug tracker for the **Northendlab Jekyll Theme**. Please Search [existing issues](https://github.com/themefisher/northendlab-jekyll/issues). It’s possible someone has already reported the same problem.
+If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/northendlab-jekyll/issues/new)
 
-* * *
+### Technical Support or Questions (Paid)
 
-### Posts
+If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.
 
-To create a new post, you can create a new markdown file inside the \_posts directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
+<!-- licence -->
+## License
 
-      ---
-      layout: post
-      title: Premiere on Broadway
-      date: 2018-08-23 16:04:00 +0300
-      image: 03.jpg
-      tags: [Rest]
-      ---
-          
+Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
 
-You can set the tags and the post image.
+**Code License:** Released under the [MIT](https://github.com/themefisher/northendlab-jekyll/blob/main/LICENSE) license.
 
-Add post images to **/img/** directory.
-
-For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
-
-* * *
-
-### Disqus Comments
-
-Galada Theme comes with Disqus comments enabled.
-
-Open `_config.yml` file, and change the `mr-brown` value on line 26 with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
-
-      Comment Section (Disqus)
-      disqus-identifier: mr-brown \# Add your shortname for Disqus Comment. For example mr-brown
-          
-
-That’s all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
-
-And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
-
-* * *
-
-### Instagram
-
-The Instagram feed is working using [Instafeed.js](http://instafeedjs.com/) to show the photos.
-
-First, you will need to get your account `userId` and `accessToken` from the following URLs:
-
-*   userId: [smashballoon.com/instagram-feed/find-instagram-user-id](https://smashballoon.com/instagram-feed/find-instagram-user-id/)
-*   accessToken: [instagram.pixelunion.net](http://instagram.pixelunion.net/)
-
-Second, open the `js/common.js` file and replace the `userId` and `accessToken` values.
-
-            var instagramFeed = new Instafeed({
-              get: 'user',
-              limit: 6,
-              resolution: 'standard_resolution',
-              userId: '8987997106',
-              accessToken: '8987997106.924f677.8555ecbd52584f41b9b22ec1a16dafb9',
-              template: ''
-            });
-          
-
-Third, open the `_config.yml` file and replace the `instafeed: false` on `instafeed: true` value.
-
-            \# Instagram Feed
-            instafeed: false \# To enable the instafeed, use the value true. To turn off use the value false.
-          
-
-* * *
-
-### Google Analytics
-
-To integrate Google Analytics, open `_config.yml`, and add your Google Analytics identifier.
-
-    \# Google Analytics
-    google-analytics: \# Add your identifier. For example UA-99631805-1
-          
-
-* * *
-
-### Update favicon
-
-You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
-
-* * *
-
-### Credits
-
-I have used the following scripts, fonts or other files as listed.
-
-*   [Google Fonts](https://fonts.google.com/specimen/Nunito) (Nunito, Sans Serif).
-*   [Ionicons Icons](https://ionicons.com/)
-*   [FitVids.js](http://fitvidsjs.com/)
-*   [Instafeed.js](http://instafeedjs.com/)
-*   [jQuery.com](https://jquery.com/)
-*   [Wait For Images](https://github.com/alexanderdickson/waitForImages)
-*   Preview Images form [unsplash.com](https://unsplash.com/), [pexels.com](https://www.pexels.com/)
-
-* * *
-### License
-
-Mit License
-
-* * *
-
-### Premium Themes by Artem
-
-| [![Coderon Jekyll Theme](https://github.com/artemsheludko/artemsheludko.github.io/raw/master/assets/preview/coderon-preview.png?raw=true)](https://jekyllthemes.io/theme/coderon-blog-jekyll-theme) | [![Renva Portfolio Jekyll Theme](https://github.com/artemsheludko/artemsheludko.github.io/raw/master/assets/preview/renva-preview.png?raw=true)](https://jekyllthemes.io/theme/renva-portfolio-jekyll-theme) | [![Nomod](https://github.com/artemsheludko/artemsheludko.github.io/raw/master/assets/preview/nomod-preview.png?raw=true)](https://jekyllthemes.io/theme/nomod-blog-jekyll-theme) |
-|:---:|:---:|:---:|
-| **Coderon** | **Renva** | **Nomod** |
+**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
